@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert student</title>
+</head>
+<body>
+<form method="POST" action='/student_form/'>
+    {% csrf_token %}
+    <label>Name:</label>
+    <input type="text" name="std_name"><br><br>
+    <label>Email Address:</label>
+    <input type="email" name="std_email"><br><br>
+    <label>Contact Number:</label>
+    <input type="number" name="std_contact"><br><br>
+    <input type="submit" value="Submit">
+
+
+</form>
+
+</body>
+</html>

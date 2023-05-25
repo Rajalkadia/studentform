@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Data</title>
+</head>
+<body>
+
+<a href="/student_form/">Insert Data</a><br>
+<table border="1">
+<tr>
+    <th>Student Id</th>
+    <th>Student Name</th>
+    <th>Student Email</th>
+    <th>Student Contact</th>
+    <th>Action</th>
+    <th>Action</th>
+</tr>
+    {% for data in student %}
+    <tr>
+        <td>{{data.std_id}}</td>
+        <td>{{data.std_name}}</td>
+        <td>{{data.std_email}}</td>
+        <td>{{data.std_contact}}</td>
+        <td><a href="/student_delete/{{data.std_id}}">Delete</a></td>
+        <td><a href="/student_update/{{data.std_id}}">Update</a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

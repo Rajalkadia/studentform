@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update student</title>
+</head>
+<body>
+<form method="POST" action='/student_update/{{std.std_id}}'>
+    {% csrf_token %}
+
+    <label>Name:</label>
+    <input type="text" name="std_name" value="{{std.std_name}}"><br><br>
+    <label>Email Address:</label>
+    <input type="email" name="std_email" value="{{std.std_email}}"><br><br>
+    <label>Contact Number:</label>
+    <input type="number" name="std_contact" value="{{std.std_contact}}"><br><br>
+    <input type="submit" value="Submit">
+
+
+</form>
+
+</body>
+</html>
